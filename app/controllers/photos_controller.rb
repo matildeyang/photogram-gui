@@ -27,4 +27,12 @@ class PhotosController < ApplicationController
     redirect_to("/photos")
 
   end 
+
+  def insert 
+    input_image = params.fetch("image")
+    input_caption = params.fetch("caption")
+    input_owner = params.fetch("owner")
+
+    render({ :template => "photo_templates/insert"})
+  end 
 end 
