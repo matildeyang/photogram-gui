@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
     new_user.save
 
-    redirect_to("/users/" + new_user.username.to_s )
+    redirect_to("/users/" + new_user.username, allow_other_host: true )
   end 
 
   def update 
@@ -44,6 +44,6 @@ class UsersController < ApplicationController
 
     the_user.save 
 
-    redirect_to("/photos/" + the_user.username.to_s )
+    redirect_to("/photos/" + the_user.username.to_s, allow_other_host: true)
   end 
 end 

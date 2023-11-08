@@ -92,3 +92,14 @@
 
 
 <h3> Add a new comment </h3>
+<form action="/add_comment">
+<label for="the_photo">Photo ID</label>
+<input type="text" name="photo_id" id="the_photo" value="<%= @the_photo.id %>">
+
+<label for="the_author">Author ID</label>
+<input type="text" name="author_id" id="the_author">
+
+<label for="the_comment">Comment</label>
+<input type="text" name="comment" id="the_comment">
+<button> Add comment </button>
+</form>
