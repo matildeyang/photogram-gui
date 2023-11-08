@@ -5,10 +5,10 @@
   <dd><%= @the_user.id %></dd>
 
   <dt>Edit user</dt>
-  <form action="/update_user"> 
-  <label for="the_username">Username</label>
-  <input type="text" name="username" id="the_username" value="<%= @the_user.username%>">
-  <button> Update user </button>
+  <form action="/update_user/<%= @the_user.username %>"> 
+    <label for="the_username">Username</label>
+    <input type="text" name="new_username" id="the_username" value="<%= @the_user.username %>">
+    <button> Update user </button>
   </form>
 </dl>
 
